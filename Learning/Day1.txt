@@ -1,0 +1,27 @@
+🧠 Day 1 Recap: Core Concepts
+1️⃣ Imports
+| Module                             | Why we use it                                                  | Where           |
+| :--------------------------------- | :------------------------------------------------------------- | :-------------- |
+| `__future__.annotations`           | Enables forward type hints; improves code clarity              | all core models |
+| `abc`                              | To create abstract base classes; enforces consistent interface | `splits.py`     |
+| `dataclasses`                      | Auto-generate class boilerplate for clean model design         | `expense.py`    |
+| `datetime`                         | Handle dates/timestamps for expenses                           | `expense.py`    |
+| `typing`                           | Gives strong type hints (`Dict`, `Optional`)                   | all models      |
+| `collections.defaultdict`          | Creates nested dicts automatically; simplifies ledger updates  | `ledger.py`     |
+| local imports (`from .splits ...`) | Connects our custom modules together                           | all models      |
+
+
+2️⃣ Key OOP Ideas You Practiced
+| Concept           | Example                                                                      | Purpose                                        |
+| :---------------- | :--------------------------------------------------------------------------- | :--------------------------------------------- |
+| **Abstraction**   | `SplitStrategy` (ABC)                                                        | Defines a common interface for all split types |
+| **Encapsulation** | Each model keeps its own data + logic (e.g., `Expense.allocations`)          | Keeps code modular and reusable                |
+| **Polymorphism**  | `EqualSplit`, `ExactSplit`, `ShareSplit` all implement `split()` differently | Enables interchangeable strategies             |
+| **Composition**   | `Expense` *has a* `SplitStrategy` instance                                   | Promotes flexibility without inheritance       |
+| **Aggregation**   | `Ledger` collects many `Expense` objects                                     | Combines data into a higher-level view         |
+
+3️⃣ Today’s Output
+✅ You can now:
+Define expenses and compute owed amounts dynamically.
+Maintain pairwise balances (who owes whom).
+Understand how imports and classes interact to build a foundation for our app.

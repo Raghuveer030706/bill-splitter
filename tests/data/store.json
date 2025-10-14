@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "username": "lee@example.com",
+      "name": "Lee",
+      "password": "pass123"
+    }
+  ],
+  "groups": [
+    {
+      "id": "g1",
+      "name": "Trip to NYC"
+    }
+  ],
+  "expenses": [],
+  "settlements": []
+}
