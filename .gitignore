@@ -7,3 +7,9 @@ data/backups/
 *.log
 .DS_Store
 .streamlit/
+venv/
+.venv/
+env/
+.Env/
+ENV/
+venv.bak/
